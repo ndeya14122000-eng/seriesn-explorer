@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Detail from "./pages/Detail";
+import SerieDetails from "./pages/SerieDetails"
 import Favoris from "./pages/Favoris";
 import "./App.css";
 
@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/serie/:id" element={<Detail />} />
+        <Route path="/serie/:id" element={<SerieDetails />} />
         <Route path="/favoris" element={<Favoris />} />
       </Routes>
     </Router>
