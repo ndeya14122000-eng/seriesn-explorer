@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SerieDetails from "./pages/SerieDetails";
-import Favoris from "./pages/Favoris";
+import Favoris from "./pages/favoris";
 import "./App.css";
 
 function App() {
