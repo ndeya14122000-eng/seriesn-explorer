@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import seriesData from "../data/series.json";
 import { FavorisContext } from "../context/FavorisContext";
 
 function SerieDetails() {
   const { id } = useParams();
-  const serie = seriesData.find((s) => s.id === parseInt(id));
+  const serie = seriesData.find((s) => s.id === Number(id));
   const { favoris, toggleFavoris } = useContext(FavorisContext);
 
   if (!serie) {

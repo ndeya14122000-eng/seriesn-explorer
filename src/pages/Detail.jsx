@@ -1,19 +1,13 @@
 import { useParams, Link } from "react-router-dom";
-import { useEffect, useState, useContext } from "react";
+import { useContext } from "react";
 import seriesData from "../data/series.json";
 import { FavorisContext } from "../context/FavorisContext";
 import StarRating from "../components/StarRating";
 
 function Detail() {
   const { id } = useParams();
-  const [serie, setSerie] = useState(null);
   const { favoris, ajouterFavori, retirerFavori } = useContext(FavorisContext);
-
-  useEffect(() => {
-    // Recherche de la série par ID
-    const foundSerie = seriesData.find((s) => s.id === parseInt(id));
-    setSerie(foundSerie || null);
-  }, [id]);
+  const serie = seriesData.find((s) => s.id === Number(id));
 
   if (!serie) {
     return (
